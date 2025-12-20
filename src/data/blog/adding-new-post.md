@@ -1,8 +1,8 @@
 ---
-author: Sat Naing
-pubDatetime: 2022-09-23T15:22:00Z
+author: azusagawa
+pubDatetime: 2025-12-21T15:22:00Z
 modDatetime: 2025-06-13T16:52:45.934Z
-title: Adding new posts in AstroPaper theme
+title: adding new posts in astropaper theme
 slug: adding-new-posts-in-astropaper-theme
 featured: true
 draft: false
