@@ -6,16 +6,16 @@
 :root,
 html[data-theme="dark"] {
   --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #60c3d5;
+  --foreground: #eaedf38c;
+  --accent: #60c3d59c;
   --muted: #e6e6e6;
-  --border: #18b1be;
+  --border: #ece9e9;
 }
 
 html[data-theme="light"] {
   --background: #212737;
   --foreground: #eaedf3;
-  --accent: #60c3d5;
+  --accent: #60c3d5e4;
   --muted: #e6e6e6;
   --border: #ece9e9;
 }
