@@ -1,7 +1,7 @@
 ---
 title: 【中译】2025.07 音楽と人 星野英彦
 author: azusagawa
-pubDatetime: 2025-09-09T00:03:12.000+00:00
+pubDatetime: 2025-09-09
 slug: 202507ongakutohito
 featured: false
 draft: false
