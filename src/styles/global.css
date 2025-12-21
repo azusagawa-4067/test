@@ -4,7 +4,7 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root,
-html[data-theme="light"] {
+html[data-theme="dark"] {
   --background: #fdfdfd;
   --foreground: #282728;
   --accent: #006cac;
@@ -12,7 +12,7 @@ html[data-theme="light"] {
   --border: #ece9e9;
 }
 
-html[data-theme="dark"] {
+html[data-theme="light"] {
   --background: #212737;
   --foreground: #eaedf3;
   --accent: #60c3d5;
