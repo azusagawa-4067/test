@@ -95,15 +95,18 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </LinkButton>
     </div>
   </main>
+  <Socials />
   <Footer />
 </Layout>
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
-      ?.dataset?.layout;
-    if (indexLayout) {
+    const mainContent = document.querySelector("#main-content");
+    if (mainContent && mainContent.dataset.layout === "index") {
       sessionStorage.setItem("backUrl", "/");
     }
-  });
+
+
+    }
+);
 </script>
