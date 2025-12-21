@@ -67,3 +67,7 @@ html[data-theme="light"] {
 :target {
   scroll-margin-block: 1rem;
 }
+
+article p {
+  text-indent: 2em;
+}
