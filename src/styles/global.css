@@ -8,14 +8,14 @@ html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
   --accent: #60c3d5;
-  --muted: #343f60;
+  --muted: #e6e6e6;
   --border: #18b1be;
 }
 
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #212737;
+  --foreground: #eaedf3;
+  --accent: #60c3d5;
   --muted: #e6e6e6;
   --border: #ece9e9;
 }
