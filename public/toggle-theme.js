@@ -28,6 +28,13 @@ function reflectPreference() {
 
   document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
 
+  const pageBg = document.querySelector(".page-bg");
+  if (pageBg) {
+    pageBg.style.background = themeValue === "dark"
+      ? `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/bg7.jpg") center / cover no-repeat`
+      : `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/bg5.jpg") center / cover no-repeat`;
+  }
+
   // Get a reference to the body element
   const body = document.body;
 

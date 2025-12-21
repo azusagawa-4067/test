@@ -42,27 +42,18 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
+      <p align="right">
+        <span style="color:rgba(4, 4, 137, 0.445)">
+          Kiss me please, Kiss me please, Kiss me please
+        </span>
+      </p>
+      <br>
+      </br>
       <p>
-        Kiss me please, Kiss me please, Kiss me please
+        <h5>BUCK-TICK, DER ZIBET, SOFT BALLET etc.
+        兴之所至的发信站。</h5>
       </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+     
     </section>
 
     <Hr />
