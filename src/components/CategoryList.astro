@@ -1,0 +1,100 @@
+---
+import type { CategoryNode } from "@/utils/buildCategoryTree";
+
+interface Props {
+  tree: Record<string, CategoryNode>;
+  activePath?: string;
+}
+
+const { tree, activePath = "" }: Props = Astro.props;
+import SelfCategoryList from "./CategoryList.astro";
+---
+
+<ul class="category-tree">
+  {Object.values(tree).map(node => {
+    const hasChildren = Object.keys(node.children).length > 0;
+    const isActive = activePath === node.path || activePath.startsWith(node.path + "/");
+    const clickable = node.hasPosts; // 有文章的分类才可跳转
+
+    return (
+      <li>
+        {hasChildren ? (
+          <details open={isActive}>
+            <summary>
+              <span class={`icon ${isActive ? "open" : ""}`}>▶</span>
+              {clickable ? (
+                <a href={`/categories/${node.path}`} class={isActive ? "font-bold text-accent" : ""}>
+                  {node.name}
+                </a>
+              ) : (
+                <span class={isActive ? "font-bold text-accent" : ""}>{node.name}</span>
+              )}
+            </summary>
+            <SelfCategoryList tree={node.children} activePath={activePath} />
+          </details>
+        ) : (
+          clickable ? (
+            <a href={`/categories/${node.path}`} class={isActive ? "font-bold text-accent" : ""}>
+              {node.name}
+            </a>
+          ) : (
+            <span class={isActive ? "font-bold text-accent" : ""}>{node.name}</span>
+          )
+        )}
+      </li>
+    );
+  })}
+</ul>
+
+<style>
+.category-tree {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.category-tree li {
+  margin: 0.3rem 0;
+}
+
+.category-tree a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-tree a:hover {
+  text-decoration: underline;
+}
+
+details > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+details > ul.category-tree {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.icon {
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+details[open] > summary > .icon {
+  transform: rotate(90deg);
+}
+</style>

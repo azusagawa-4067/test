@@ -1,0 +1,139 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { buildCategoryTree } from "@/utils/buildCategoryTree";
+import type { CategoryNode } from "@/utils/buildCategoryTree";
+import CategoryList from "@/components/CategoryList.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/layouts/Main.astro";
+import { SITE } from "@/config";
+
+const { slug } = Astro.params;
+const categoryHome = "/categories/";
+
+/* ---------- 生成所有分类路径 ---------- */
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  const categories = new Set<string>();
+
+  posts.forEach(post => {
+    if (post.data.category) {
+      categories.add(post.data.category.trim());
+    }
+  });
+
+  return Array.from(categories).map(category => ({
+    params: {
+      slug: category, 
+    },
+  }));
+}
+
+/* ---------- 当前分类路径 ---------- */
+const slugArr = Array.isArray(slug) ? slug : [slug];
+const categoryPath = slugArr.join("/");
+
+/* ---------- 所有文章 ---------- */
+const allPosts: CollectionEntry<"blog">[] = await getCollection("blog");
+
+/* ---------- 给文章生成真实 URL slug ---------- */
+const postsWithSlug = allPosts.map(post => {
+  const slug = post.filePath
+    ?.replace(/^src\/data\/blog\//, "")
+    .replace(/\.md$/, "");
+
+  return { ...post, slug };
+});
+
+/* ---------- 过滤当前分类 ---------- */
+const posts = postsWithSlug.filter(
+  post =>
+    post.data.category?.trim() === categoryPath &&
+    !post.data.draft
+);
+
+const categoryTree: Record<string, CategoryNode> = buildCategoryTree(allPosts);
+
+const activePath = categoryPath;
+---
+
+<Layout title={`分类：${categoryPath} | ${SITE.title}`}>
+  <Header />
+
+  <Main pageTitle={["分类：", categoryPath]} titleTransition={categoryPath}>
+    <p class="mb-4">
+      <a href={categoryHome} class="text-accent hover:underline">
+        ← 返回分类首页
+      </a>
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- 左侧分类树（桌面端显示） -->
+      <aside class="w-full md:w-64 hidden md:block">
+        <h2 class="text-xl font-semibold mb-4">分类导航</h2>
+        <CategoryList tree={categoryTree} activePath={activePath} />
+      </aside>
+
+      <!-- 移动端折叠分类树 -->
+      <div class="md:hidden mb-4">
+        <button id="toggle-category" class="px-3 py-1 border rounded">
+          分类导航
+        </button>
+        <div id="mobile-category" class="hidden mt-2">
+          <CategoryList tree={categoryTree} activePath={activePath} />
+        </div>
+      </div>
+
+      <!-- 右侧文章列表 -->
+      <section class="flex-1">
+        {posts.length === 0 ? (
+          <p>该分类下暂无文章</p>
+        ) : (
+          <ul class="space-y-2">
+            {posts.map(post => (
+              <li>
+                <a href={`/posts/${post.slug}/`} class="text-lg hover:underline">
+                  {post.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>
+
+<script is:inline>
+  const toggleBtn = document.getElementById("toggle-category");
+  const mobileTree = document.getElementById("mobile-category");
+  toggleBtn?.addEventListener("click", () => {
+    if (mobileTree) {
+      mobileTree.classList.toggle("hidden");
+    }
+  });
+</script>
+
+<style>
+/* 微调布局与间距 */
+.page-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+ul.space-y-2 > li + li {
+  margin-top: 0.5rem;
+}
+</style>

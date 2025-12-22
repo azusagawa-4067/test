@@ -8,10 +8,9 @@ draft: false
 tags:
   - BUCK-TICK
   - 自译采访
-  - 音乐与人
-  - 樱井敦司
   - ISSAY
   - DER ZIBET
+category: interviews/BUCK-TICK
 description:
   “颓废师兄弟对谈”。
 ---

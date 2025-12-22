@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - 同人
+category: 同人/自作
 description:
   折笠千斗察觉到了不对劲。他对他相方出手了。但是隔着两重鬼影，他偷吻未遂。
 ---

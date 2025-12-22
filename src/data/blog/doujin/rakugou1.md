@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - 同人
+category: 同人/自作
 description:
   “……我可没说不打算杀死你了。”
   “我知道。我一直在等你动手。”

@@ -2,12 +2,13 @@
 title: 戻れない時間の渦
 author: azusagawa
 pubDatetime: 2025-12-21
-slug: lyricsdz1
+slug: kuten1
 featured: false
 draft: false
 tags:
   - DER ZIBET
   - 歌词
+category: 歌词/DER ZIBET/句点 ~ period ~
 description:
   句点 ~ Period ~  track 1
 ---

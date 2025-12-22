@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - 同人
+category: 同人/自作
 description:
   对，他才是伪物，但你岂不更加什么都不是吗，我亲爱的！
 ---

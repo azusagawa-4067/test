@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - 同人自译
+category: 同人/翻译
 description:
   《檻箱4》——我想象着。在这纯白的床单之上，像迸裂的草莓一样飞溅的绀野的头。被染得通红的白色。
 ---

@@ -1,0 +1,31 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { buildCategoryTree } from "@/utils/buildCategoryTree";
+import type { CategoryNode } from "@/utils/buildCategoryTree";
+import CategoryList from "@/components/CategoryList.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/layouts/Main.astro";
+import { SITE } from "@/config";
+
+const posts = await getCollection("blog");
+const categoryTree: Record<string, CategoryNode> = buildCategoryTree(posts);
+---
+
+<Layout title={`分类 | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="分类">
+    <section class="pt-8 pb-6">
+      {Object.keys(categoryTree).length === 0 ? (
+        <p>暂无分类</p>
+      ) : (
+        <CategoryList tree={categoryTree} />
+      )}
+    </section>
+  </Main>
+  <Footer />
+</Layout>
+
+
+

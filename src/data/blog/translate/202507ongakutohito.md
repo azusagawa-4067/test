@@ -8,8 +8,7 @@ draft: false
 tags:
   - BUCK-TICK
   - 自译采访
-  - 音乐与人
-  - 星野英彦
+category: interviews/BUCK-TICK
 description:
   六月风物诗。
 ---
