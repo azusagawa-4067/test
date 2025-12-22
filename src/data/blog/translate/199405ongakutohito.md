@@ -10,7 +10,7 @@ tags:
   - 自译采访
   - ISSAY
   - DER ZIBET
-category: interviews/BUCK-TICK
+category: 采访/BUCK-TICK
 description:
   “颓废师兄弟对谈”。
 ---

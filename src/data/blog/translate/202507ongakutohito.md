@@ -8,7 +8,7 @@ draft: false
 tags:
   - BUCK-TICK
   - 自译采访
-category: interviews/BUCK-TICK
+category: 采访/BUCK-TICK
 description:
   六月风物诗。
 ---
