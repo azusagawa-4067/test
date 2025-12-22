@@ -37,8 +37,21 @@ const isActive = (path: string) => {
   >
     <div
       id="top-nav-wrap"
-      class="relative flex w-full items-baseline justify-between bg-background p-4 sm:items-center sm:py-6"
-    >
+      class="
+        relative flex w-full items-center justify-between
+        bg-gradient-to-b from-zinc-900 via-zinc-950 to-black
+        text-zinc-100
+        py-8 sm:py-12
+        border-b border-white/5
+      "
+>
+    <div
+      class="
+        pointer-events-none
+        absolute inset-0
+        bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),transparent_60%)]
+      "
+  ></div>
       <a
         href="/"
         class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"

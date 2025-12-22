@@ -62,7 +62,7 @@ const activePath = categoryPath;
 <Layout title={`分类：${categoryPath} | ${SITE.title}`}>
   <Header />
 
-  <Main pageTitle={["分类：", categoryPath]} titleTransition={categoryPath}>
+  <Main pageTitle={["分类：", categoryPath]} titleTransition={categoryPath} showBreadcrumb={false}>
     <p class="mb-4">
       <a href={categoryHome} class="text-accent hover:underline">
         ← 返回分类首页
