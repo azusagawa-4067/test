@@ -10,7 +10,7 @@ tags:
   - 杂谈
 category: 杂谈/BUCK-TICK
 description:
-  没有了汽油的破旧BT号在下一个乐句的Boogie Woogie里变成BT TRAIN，驶向あの娘が待っている的地方。
+  「オンポロ車はガス欠」
 ---
 
 <p>非常喜欢这首歌。配上歌词一起看越看越喜欢。</p>
