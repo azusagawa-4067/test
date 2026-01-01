@@ -1,5 +1,5 @@
 ---
-title: 【菊夏】十六夜秘め事噺
+title: 【中译/菊夏】十六夜秘め事噺
 author: azusagawa
 pubDatetime: 2024-03-15
 slug: rakugou2

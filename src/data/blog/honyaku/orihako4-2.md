@@ -1,5 +1,5 @@
 ---
-title: 大衡祐樹 [OCEAN BLACK]
+title: 【中译】大衡祐樹 [OCEAN BLACK]
 author: azusagawa
 pubDatetime: 2023-11-01
 slug: orihako4-2

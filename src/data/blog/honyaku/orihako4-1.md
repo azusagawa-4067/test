@@ -1,5 +1,5 @@
 ---
-title: 斎木旬 [The phantom of Strawberry]
+title: 【中译】斎木旬 [The phantom of Strawberry]
 author: azusagawa
 pubDatetime: 2023-10-23
 slug: orihako4-1
