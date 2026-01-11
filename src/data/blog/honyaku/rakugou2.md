@@ -6,8 +6,8 @@ slug: rakugou2
 featured: false
 draft: false
 tags:
-  - 同人
-category: 同人/翻译
+  - 同人自译
+category: 同人/翻译/其他
 description:
   他抱了这个孩子——这就是事实。
 ---
