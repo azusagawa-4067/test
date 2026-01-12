@@ -121,7 +121,7 @@ https://marysue-complex.tumblr.com/
 https://morgianasama.livejournal.com/
 <p>英语/个人网站·非bt专门网站/最后更新：2012-12-31</p>
 
-### 6. J-Rock Magazines Brasil　＃BUCK-TICK
+### 6. J-Rock Magazines Brasil：BUCK-TICK
 https://j-rockmagazinesbrasil.blogspot.com/search?q=BUCK-TICK
 <p>葡萄牙语/个人网站·非bt专门网站/最后更新：2013-08-22</p>
 
