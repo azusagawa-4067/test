@@ -2,7 +2,7 @@
 title: 【COE】关于都想要自杀的鸟亲子
 author: azusagawa
 pubDatetime: 2023-07-11
-slug: coe1
+slug: coe2
 featured: false
 draft: false
 tags:
